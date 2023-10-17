@@ -1,0 +1,12 @@
+version: 2
+
+sources:
+    - name: rssl_source
+      description: This is a replica of the Redshift DW used by our app
+      database: jade_test_db
+      schema: public
+      tables:
+          - name: cc_info
+            description: One record per credit_card
+          - name: transaction
+            description: Transactions of credit_cards.

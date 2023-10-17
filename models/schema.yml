@@ -1,0 +1,34 @@
+version: 2
+
+models:
+  - name: stg_cc_info
+    description: This model cleans up credit_card data
+    columns:
+      - name: credit_card
+        description: Primary key
+        tests:
+          - unique
+          - not_null
+  - name: stg_transaction
+    description: This model cleans up order data
+    columns:
+      - name: order_id
+        description: Primary key
+        tests:
+          - unique
+          - not_null
+
+  - name: fct_cc
+    description: Credit card with limit of the creditcard 
+    columns:
+      - name: credit_card
+        description: Primary key
+        tests:
+          - not_null
+  - name: top5_state
+    description: Top 5 credit limit state
+    columns:
+      - name: credit_card
+        description: Primary key
+        tests:
+          - not_null
